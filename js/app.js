@@ -23,28 +23,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const textoDinamico = document.getElementById('h1');
 
     botaoSim.addEventListener('click', function () {
-        
+        // Esconde os botões
         elemento.style.display = 'none';
         botaoSim.style.display = 'none';
 
-       
+        // Altera o estilo e o texto
         textoDinamico.style.fontSize = '2em';
         textoDinamico.innerHTML = "<h2>Eu sabia que você não iria resistir, hahahah!</h2><h3>Te Aguardo no WhatsApp! Até breve!!! 🥰</h3>";
 
-     //Exemplo abaixo:
-//  const numeroWhatsApp = "5521969206997"; // Seu número Aqui
-        
-        const numeroWhatsApp = "5521969206997"; // Seu número Aqui
-
-
+        // Número do WhatsApp no formato internacional
+        const numeroWhatsApp = "5521969206997"; // Seu número
         const mensagem = encodeURIComponent("Eu aceitei o convite! 😍");
 
+        // Detecta o tipo de dispositivo (celular ou PC)
+        const isMobile = /Mobi|Android/i.test(window.navigator.userAgent);
 
-  // Redireciona para o WhatsApp depois de 2 segundos
-         setTimeout(() => {
-              window.location.href = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;  
+        // Redireciona para o WhatsApp após 2 segundos, dependendo do dispositivo
+        setTimeout(() => {
+            if (isMobile) {
+                // Para celular (WhatsApp App)
+                window.location.href = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+            } else {
+                // Para PC (WhatsApp Web)
+                window.location.href = `https://web.whatsapp.com/send/?phone=${numeroWhatsApp}&text=${mensagem}&type=phone_number&app_absent=0`;
+            }
         }, 2000);
-      
-    
     });
 });
