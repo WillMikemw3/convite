@@ -23,17 +23,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const textoDinamico = document.getElementById('h1');
 
     botaoSim.addEventListener('click', function () {
-        // Esconde os botões
+        
         elemento.style.display = 'none';
         botaoSim.style.display = 'none';
 
-        // Altera o estilo e o texto
+       
         textoDinamico.style.fontSize = '2em';
         textoDinamico.innerHTML = "<h2>Eu sabia que você não iria resistir, hahahah!</h2><h3>Te Aguardo no WhatsApp! Até breve!!! 🥰</h3>";
 
-       
-        // Número do WhatsApp no formato internacional
-        const numeroWhatsApp = "5521969206997"; // Seu número
+     //Exemplo abaixo:
+//  const numeroWhatsApp = "5521969206997"; // Seu número Aqui
+        
+        const numeroWhatsApp = "5521969206997"; // Seu número Aqui
+
+
         const mensagem = encodeURIComponent("Eu aceitei o convite! 😍");
 
 
