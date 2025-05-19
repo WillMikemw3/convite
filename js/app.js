@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         textoDinamico.innerHTML = "<h2>Eu sabia que você não iria resistir, hahahah!</h2><h3>Te Aguardo no WhatsApp! Até breve!!! 🥰</h3>";
 
         // Número do WhatsApp no formato internacional
-        const numeroWhatsApp = "5521969206997"; // Seu número
+        const numeroWhatsApp = "5521983920463"; // Seu número
         const mensagem = encodeURIComponent("Eu aceitei o convite! 😍");
 
         // Detecta o tipo de dispositivo (celular ou PC)
